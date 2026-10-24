@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fff5ee">
+<title>my everything ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Cairo,sans-serif;background:radial-gradient(ellipse at 10% 5%,#ffe1eb 0,transparent 34%),radial-gradient(ellipse at 90% 25%,#f7d9c8 0,transparent 30%),linear-gradient(135deg,#fff7f0,#fce8ed 48%,#fff4e8);color:#694653;min-height:100vh;overflow-x:hidden}
+#lock{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:22px;background:linear-gradient(#fff8f0d9,#fff8f0d9),url('flowers.svg') center/cover}
+.lockbox{width:min(100%,390px);text-align:center}.envelope{height:180px;margin:0 auto 30px;width:290px;max-width:90%;position:relative;background:#d9c5aa;clip-path:polygon(0 0,100% 0,100% 100%,0 100%);box-shadow:0 12px 25px #8b68502a}
+.envelope:before{content:"";position:absolute;inset:0;background:#e7d6bf;clip-path:polygon(0 0,50% 58%,100% 0)}.label{position:absolute;z-index:2;top:20px;left:50%;transform:translateX(-50%);background:#fffaf4;border:1px solid #e7d4c4;padding:8px 24px;width:72%;font-family:Georgia,serif;font-size:12px;letter-spacing:3px}.label b{display:block;font-size:19px;font-style:italic;letter-spacing:0}.seal{position:absolute;top:78px;left:calc(50% - 24px);width:48px;height:48px;border-radius:50%;background:#b68b61;color:#f7e6ce;display:grid;place-items:center;font-size:24px;border:3px solid #d5b58e}
+.lockicon{margin:10px;font-size:20px;color:#b8a38d}.lockbox label{display:block;font-size:10px;letter-spacing:3px;margin:12px}.lockbox input{width:230px;max-width:90%;padding:12px;border:1px solid #ead8cb;border-radius:20px;background:#fffdfb;text-align:center;font:14px Cairo;outline:none}.btn{border:1px solid #b96c79;background:#bd586c;color:#fff;border-radius:22px;padding:10px 26px;font:13px Cairo;cursor:pointer;box-shadow:0 5px 12px #b96c7922}.error{height:22px;color:#a8475a;font-size:12px}
+#site{display:none;min-height:100vh;background:radial-gradient(ellipse at 5% 15%,#f9d7e4aa,transparent 35%),radial-gradient(ellipse at 95% 65%,#f4d6c8aa,transparent 32%),linear-gradient(135deg,#fff7f0ee,#fbe8efed),url('flowers.svg') center/cover fixed;padding:22px 12px 100px;position:relative}
+.page{display:none;min-height:70vh;max-width:460px;margin:0 auto 18px;background:linear-gradient(145deg,#fffdf9f5,#fff0f5f0);border:1px solid #f1cbd7;border-radius:26px;box-shadow:0 18px 48px #a34f6d20, inset 0 0 0 5px #fff9;padding:34px 24px 28px;text-align:center;position:relative;overflow:hidden}.page:before{content:'♡  ✧  ♡';position:absolute;top:10px;left:14px;color:#d99aaf;letter-spacing:7px;font-size:15px;opacity:.8}.page:after{content:'✿';position:absolute;bottom:8px;right:15px;color:#d9a1ad;font-size:24px;opacity:.5;pointer-events:none}
+.page.active{display:flex;flex-direction:column;align-items:center;justify-content:space-between;animation:fade .45s ease}
+.emoji{font-size:36px;margin:10px 0 24px;filter:drop-shadow(0 4px 5px #d78aa044);animation:softbeat 2.2s ease-in-out infinite}.copy{font-size:18px;line-height:2.25;white-space:pre-line;margin:auto 0;padding:15px 0}.next{margin:26px auto 0;background:#f5dce1;border:1px solid #d6a9b2;color:#503c41;border-radius:30px;padding:9px 34px;font:italic 14px Georgia;cursor:pointer}
+.player{position:fixed;z-index:5;bottom:10px;left:50%;transform:translateX(-50%);width:min(94%,450px);min-height:62px;border-radius:30px;background:#fff8f0ed;border:1px solid #eeded5;display:flex;align-items:center;gap:10px;padding:8px 12px;box-shadow:0 5px 22px #6b46451c;font-size:12px}
+.album{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#8c7750,#342b25);display:grid;place-items:center;color:white;font-size:18px;flex-shrink:0}.control{border:0;background:#f1d8dc;color:#61464d;border-radius:50%;width:28px;height:28px;cursor:pointer}.track{flex:1;min-width:0}.track strong{display:block;font-weight:500;white-space:nowrap}.track small{color:#9e8888}.bar{height:3px;background:#e8d7d2;margin-top:5px;border-radius:3px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:#bd7182}
+.gallery{display:grid;gap:15px;width:100%;margin:16px 0}.photo{width:100%;height:auto;max-height:62vh;object-fit:contain;border-radius:5px;background:#f2e5df;display:block}.caption{background:#fff8f4;padding:8px;margin-top:4px;font-size:12px}
+.memory{background:linear-gradient(145deg,#fffaf7,#fce8ed);border:1px solid #f0d1da;border-radius:20px;padding:30px 20px;min-height:260px;width:100%;line-height:2;box-shadow:0 8px 22px #a34f6d12}
+.sparkle{position:fixed;z-index:1;pointer-events:none;opacity:.72;animation:floatUp linear forwards;filter:drop-shadow(0 3px 4px #d27e9b33)}.corner-flower{position:fixed;z-index:0;pointer-events:none;font-size:52px;opacity:.19}.corner-flower.one{top:12px;left:10px;transform:rotate(-20deg)}.corner-flower.two{right:8px;bottom:85px;transform:rotate(18deg)}.lockbox,.page,.player{z-index:2}.page{isolation:isolate}.page:before,.page:after{z-index:-1}@keyframes floatUp{from{transform:translateY(0) rotate(0deg);opacity:0}15%{opacity:.75}to{transform:translateY(-110vh) rotate(35deg);opacity:0}}@keyframes softbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(max-width:380px){.copy{font-size:16px}.page{padding:25px 18px}.photo{max-height:54vh}}
+</style></head><body>
+<div class="corner-flower one">🌸</div><div class="corner-flower two">🌷</div>
+<section id="lock"><div class="lockbox">
+<div class="envelope"><div class="label">LOVE<b>my everything ❤️</b></div><div class="seal">♥</div></div>
+<div class="lockicon">♙</div><label>ENTER THE SECRET WORD</label>
+<input id="password" type="password" placeholder="password" autocomplete="off">
+<div style="margin:14px"><button class="btn" id="unlock">♡ Unlock ♡</button></div><div class="error" id="error"></div>
+</div></section>
+<section id="site">
+<article class="page active"><div class="emoji">😍</div><div class="copy">حبيت اعمل هديه جديده وعايزين نملاله
+صورنا بقا بس قبل اي حاجه عايز تعرفي
+اني بحبك</div><button class="next">next →</button></article>
+<article class="page"><div class="emoji">💗</div><div class="copy">13-10 ❤️
+أول مرة اعترفتلك فيها بحبي
+واليوم اللي هيفضل مميز عندي دايمًا</div><button class="next">next →</button></article>
+<article class="page" style="padding:12px"><div class="gallery">
+<div><img class="photo" src="her-photo.jpeg" alt="صورتك"><div class="caption">أجمل صورة ❤️</div></div>
+<div class="memory">حتى لو معايا صورة واحدة بس، فهي كفاية تبقى ذكرى حلوة 💗</div>
+</div><button class="next">next →</button></article>
+<article class="page"><div class="emoji">💌</div><div class="memory">بحبك اوي<br><br>13-10 ❤️</div><button class="next">memories 💌</button></article>
+<div class="player"><div class="album">♥</div><button class="control" id="back" aria-label="السابق">◀</button><button class="control" id="play" aria-label="تشغيل وإيقاف">▶</button><button class="control" id="forward" aria-label="التالي">▶</button><div class="track"><strong>توليت — ولا عاش ولا كان ❤️</strong><small id="status">اضغط Unlock لتبدأ الأغنية</small><div class="bar"><i id="progress"></i></div></div></div>
+<audio id="audio" src="song.mpeg" preload="auto" loop></audio>
+</section>
+<script>
+const lock=document.getElementById('lock'),site=document.getElementById('site'),input=document.getElementById('password'),audio=document.getElementById('audio'),playBtn=document.getElementById('play'),status=document.getElementById('status');
+function makeHeart(){const el=document.createElement('span');el.className='sparkle';el.textContent=['♡','💗','💕','✧','🌸'][Math.floor(Math.random()*5)];el.style.left=Math.random()*96+'vw';el.style.bottom='-35px';el.style.fontSize=(14+Math.random()*24)+'px';el.style.animationDuration=(7+Math.random()*7)+'s';document.body.appendChild(el);setTimeout(()=>el.remove(),15000)}setInterval(makeHeart,900);for(let i=0;i<8;i++)setTimeout(makeHeart,i*220);
+function unlock(){if(input.value.trim().toLowerCase()==='love'){lock.style.display='none';site.style.display='block';document.querySelectorAll('.page')[0].classList.add('active');audio.currentTime=0;audio.play().then(()=>{playBtn.textContent='Ⅱ';status.textContent='توليت — ولا عاش ولا كان'}).catch(()=>{status.textContent='اضغط ▶ لتشغيل الأغنية'});}else document.getElementById('error').textContent='الكلمة مش صح، جربي تاني 💗'}
+document.getElementById('unlock').onclick=unlock;input.addEventListener('keydown',e=>{if(e.key==='Enter')unlock()});
+let index=0;const pages=[...document.querySelectorAll('.page')];document.querySelectorAll('.next').forEach(b=>b.onclick=()=>{pages[index].classList.remove('active');index=(index+1)%pages.length;pages[index].classList.add('active');window.scrollTo({top:0,behavior:'smooth'})});
+document.getElementById('back').onclick=()=>{pages[index].classList.remove('active');index=(index-1+pages.length)%pages.length;pages[index].classList.add('active')};
+document.getElementById('forward').onclick=()=>document.querySelectorAll('.next')[index].click();
+playBtn.onclick=()=>{if(audio.paused){audio.play().then(()=>{playBtn.textContent='Ⅱ';status.textContent='توليت — ولا عاش ولا كان'}).catch(()=>status.textContent='تعذر تشغيل الملف الصوتي');}else{audio.pause();playBtn.textContent='▶';status.textContent='متوقفة مؤقتًا'}};
+audio.addEventListener('timeupdate',()=>{if(audio.duration)document.getElementById('progress').style.width=(audio.currentTime/audio.duration*100)+'%'});
+</script></body></html>
